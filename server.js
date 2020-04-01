@@ -11,6 +11,8 @@ app.engine('hbs', hbs.express4({
 }))
 
 app.set('view engine', 'hbs')
+app.use(express.static('public'))
+
 
 app.use('/', require('./routes/handlers').route)
 

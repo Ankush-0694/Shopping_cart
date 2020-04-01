@@ -4,6 +4,7 @@ const route = express.Router()
 route.get('/home', (req, res) => {
     res.render('home', {
         style: 'home.css',
+        title: 'homepage',
         layout: 'layouts/main'
     })
 })
