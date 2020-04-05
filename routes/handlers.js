@@ -22,17 +22,26 @@ route.get('/wishlist', (req, res) => {
     })
 })
 
+// route.post('/wishlist', (req, res) => {
+//     wishlist.create({
+//         listId: req.body.listId,
+//         item_name: req.body.item_name,
+//         description: req.body.description,
+//         img_url: req.body.img_url
+//     }).then(() => {
+//         res.redirect('/wishlist')
+//     }).catch((err) => {
+//         if (err) throw err
+//     })
+// })
 route.post('/wishlist', (req, res) => {
     wishlist.create({
         listId: req.body.listId,
         item_name: req.body.item_name,
         description: req.body.description,
         img_url: req.body.img_url
-    }).then(() => {
-        res.redirect('/wishlist')
-    }).catch((err) => {
-        if (err) throw err
     })
+    res.send('success')
 })
 
 route.get('/user', (req, res) => {

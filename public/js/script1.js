@@ -13,20 +13,22 @@ $(() => {
 
         let img_url = $(item).children()[0]
         item_img_url = $(img_url).attr('src')
+        console.log('clicked')
+
+
 
         $.post('/home/wishlist', {
             listId: item_Id,
             name: item_name,
             description: item_description,
             img_url: item_img_url
+        }, (data) => {
+            if (data == 'success') {
+                console.log('successfull')
+            }
         })
 
-        // wishlist.create({
-        //     listId: item_Id,
-        //     item_name: name,
-        //     description: item_description,
-        //     img_url: item_img_url
-        // })
+
         // console.log(item)
         // console.log(item_nest)
         // console.log(listId)
