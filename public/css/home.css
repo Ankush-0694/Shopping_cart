@@ -68,7 +68,7 @@
 }
 
 #trending-cards .card {
-    background: linear-gradient(to bottom, rgb(138, 44, 44), rgb(223, 223, 152))
+    background: white;
 }
 
 #trending-cards .card img {

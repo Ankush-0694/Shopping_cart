@@ -21,17 +21,17 @@
     </div>
 </div>
 
-<div class="bg-success" id="trending">
+<div class="bg-primary" id="trending">
     <div class="mx-auto" id="trend-heading" style="text-align: center;">
         <h1>TRENDING PRODUCTS</h1>
         <p style=" text-align: center;">our plant house</p>
     </div>
     <div class="container-lg">
         <div class="card-group p-3" id="trending-cards">
-            <div class="card mx-3">
-                <img src="https://source.unsplash.com/300x300/?shirt" class="card-img-top" lt="...">
+            <div class="card mx-3" id="t-pro-1">
+                <img src="https://source.unsplash.com/300x300/?plant" class="card-img-top" lt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Card title 1</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
                 </div>
@@ -43,14 +43,12 @@
 
                         <button type="button" class="btn btn-primary mx-2 my-2">ADD TO CART</button>
                     </div>
-
-
                 </div>
             </div>
-            <div class="card mx-3">
-                <img src="https://source.unsplash.com/300x300/?shirt" class="card-img-top" alt="...">
+            <div class="card mx-3" id="t-pro-2">
+                <img src="https://source.unsplash.com/300x300/?water" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Card title 2</h5>
                     <p class="card-text">This card has supporting text below as a natural lead-in to additional
                         content.
                     </p>
@@ -58,16 +56,16 @@
                 <div class="card-footer bg-dark">
                     <div class="btn-group d-sm-block" style="text-align: center;" role="group"
                         aria-label="Basic example">
-                        <button type="button" class="btn btn-danger mx-2 my-2">ADD TO WISHLIST</button>
+                        <button type="button" class="btn btn-danger mx-2 my-2"> ADD TO WISHLIST</button>
 
                         <button type="button" class="btn btn-primary mx-2 my-2">ADD TO CART</button>
                     </div>
                 </div>
             </div>
-            <div class="card mx-3">
-                <img src="https://source.unsplash.com/300x300/?shirt" class="card-img-top" alt="...">
+            <div class="card mx-3" id="t-pro-3">
+                <img src="https://source.unsplash.com/300x300/?nature" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Card title 3</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                         additional content. This card has even longer content than the first to show that equal
                         height
@@ -89,69 +87,62 @@
 <div class="container-fluid bg-dark">
     <div class="container">
         <div class="card mb-3 pt-5 border-0 bg-dark">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="https://source.unsplash.com/300x300/?bihgibih" class="card-img w-75 my-5 mx-5" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <p class="card-text text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Error et commodi beatae deleniti odio non dolore, quidem officiis obcaecati deserunt
-                            velit maxime autem nihil animi repellat quaerat eligendi labore excepturi eveniet a
-                            asperiores. Laudantium aliquid ipsa officiis placeat voluptatum corporis cupiditate sit,
-                            repellendus, necessitatibus quod eum laborum, vitae eius corrupti.</p>
-                    </div>
+            {{!-- <div class="row no-gutters"> --}}
+            <div class="col-md-4">
+                <img src="https://source.unsplash.com/300x300/?bihgibih" class="card-img w-75 my-5 mx-5" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p class="card-text text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Error et commodi beatae deleniti odio non dolore, quidem officiis obcaecati deserunt
+                        velit maxime autem nihil animi repellat quaerat eligendi labore excepturi eveniet a
+                        asperiores. Laudantium aliquid ipsa officiis placeat voluptatum corporis cupiditate sit,
+                        repellendus, necessitatibus quod eum laborum, vitae eius corrupti.</p>
                 </div>
             </div>
         </div>
-
-
-        <div class="card-deck">
-            <div class="card bg-dark border-0">
-                <div class="card-body">
-                    <h5 class="card-title text-white">CONTACT US</h5>
-                    <hr class="bg-light">
-                    <ul class="list-group bg-dark">
-                        <li class="list-group-item border-0 bg-dark text-white ml-0 pl-0 py-1">FACEBOOK
-                        </li>
-                        <li class="list-group-item border-0 bg-dark text-white ml-0 pl-0 py-1">GITHUB</li>
-                        <li class="list-group-item border-0 bg-dark text-white ml-0 pl-0 py-1">LINKEDIN</li>
-                        <li class="list-group-item border-0 bg-dark text-white ml-0 pl-0 py-1">REDDIT
-                        </li>
-
-
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card bg-dark border-0">
-                <div class="card-body">
-                    <h5 class="card-title text-white">FAQs</h5>
-                    <hr class="bg-light">
-                    <p class="text-white">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt id amet illum optio.
-                        Maiores fugiat quod quidem repellat sequi odio.
-                        <a href="" class="text-white">http://bit.ly/2KJ1qdU </a>
-                    </p>
-                    <p class="text-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptate perspiciatis
-                        incidunt autem voluptatibus, atque quidem porro omnis dolorem et.
-                    </p>
-
-
-                </div>
-            </div>
-        </div>
-
-        <!-- copyright section -->
-
-        <!-- !copyright section -->
     </div>
+
+
+    <div class="card-deck">
+        <div class="card bg-dark border-0">
+            <div class="card-body">
+                <h5 class="card-title text-white">CONTACT US</h5>
+                <hr class="bg-light">
+                <ul class="list-group bg-dark">
+                    <li class="list-group-item border-0 bg-dark text-white ml-0 pl-0 py-1">FACEBOOK
+                    </li>
+                    <li class="list-group-item border-0 bg-dark text-white ml-0 pl-0 py-1">GITHUB</li>
+                    <li class="list-group-item border-0 bg-dark text-white ml-0 pl-0 py-1">LINKEDIN</li>
+                    <li class="list-group-item border-0 bg-dark text-white ml-0 pl-0 py-1">REDDIT
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="card bg-dark border-0">
+            <div class="card-body">
+                <h5 class="card-title text-white">FAQs</h5>
+                <hr class="bg-light">
+                <p class="text-white">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt id amet illum optio.
+                    Maiores fugiat quod quidem repellat sequi odio.
+                    <a href="" class="text-white">http://bit.ly/2KJ1qdU </a>
+                </p>
+                <p class="text-white">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptate perspiciatis
+                    incidunt autem voluptatibus, atque quidem porro omnis dolorem et.
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- copyright section -->
+
+    <!-- !copyright section -->
 </div>
-<div id="check">
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus molestias ab libero sed praesentium perferendis
-    inventore velit aspernatur suscipit quam.
 </div>
-<p id="para">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ullam.
-</p>

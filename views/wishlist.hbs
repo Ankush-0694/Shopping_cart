@@ -3,7 +3,9 @@
 <p>{{ para }}</p>
 <ul class="list-group">
 
-    <li class="list-group-item">
 
-    </li>
+    {{#each product as |item|}}
+    <li class="list-group-item">{{item.name}} {{item.price}}</li>
+    {{/each}}
+
 </ul>
