@@ -1,4 +1,9 @@
 <h1>Login</h1>
+{{#if error}}
+<div id="error-message">
+    <h1>{{ error }}</h1>
+</div>
+{{/if}}
 <p>New User? Signup First <a href="/signup">Signup</a></p>
 <form action="/login" method="POST">
     <input type="text" placeholder="username" name="username">

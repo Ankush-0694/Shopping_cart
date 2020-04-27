@@ -3,12 +3,13 @@ const User = require('./model/Users')
 const LocalStrategy = require('passport-local').Strategy
 
 passport.use(new LocalStrategy((username, password, done) => {
-    console.log(username)
+    // console.log(username)
     User.findOne({
         username: username
     }).then((user) => {
 
         if (!user) {
+            // req.flash("error", 'No user found')
             return done(null, false)
         }
         if (user.password != password) {
