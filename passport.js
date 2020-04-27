@@ -9,11 +9,15 @@ passport.use(new LocalStrategy((username, password, done) => {
     }).then((user) => {
 
         if (!user) {
-            // req.flash("error", 'No user found')
-            return done(null, false)
+
+            return done(null, false, {
+                message: "Invalid Username"
+            })
         }
         if (user.password != password) {
-            return done(null, false)
+            return done(null, false, {
+                message: "Password Galat Hai Janaab"
+            })
         }
         // console.log(User)
 
