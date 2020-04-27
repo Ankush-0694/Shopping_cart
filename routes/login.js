@@ -9,7 +9,8 @@ route.get('/', (req, res) => {
 
 route.post('/', passport.authenticate('local', {
     successRedirect: '/home',
-    failureRedirect: '/login'
+    failureRedirect: '/login',
+    failureFlash: 'Invalid username or password.'
 }))
 
 module.exports = {

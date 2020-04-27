@@ -1,3 +1,4 @@
+
 $(() => {
 
     // let wishlistIds = []
@@ -22,11 +23,17 @@ $(() => {
             name: item_name,
             description: item_description,
             img_url: item_img_url
-        }, (data) => {
-            if (data == 'success') {
-                console.log('successfull')
-            }
         })
+        // $.ajax({
+        //     url: '/home/wishlist',
+        //     method: 'POST',
+        //     success: JSON.stringify({
+        //         listId: item_Id,
+        //         name: item_name,
+        //         description: item_description,
+        //         img_url: item_img_url
+        //     })
+        // })
 
 
         // console.log(item)

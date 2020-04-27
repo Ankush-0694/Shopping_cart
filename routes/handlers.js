@@ -1,7 +1,5 @@
 const express = require('express')
 const route = express.Router()
-const { db, Users } = require('../models/db')
-const wishlist = require('../models/wishlist')
 
 
 route.get('/', (req, res) => {
@@ -14,39 +12,36 @@ route.get('/', (req, res) => {
 })
 
 
-route.get('/wishlist', (req, res) => {
-    res.render('wishlist', {
-        heading: 'my wishlist',
-        para: 'my paragraph',
-        layout: 'layouts/main'
-    })
-})
+// route.get('/wishlist', async (req, res) => {
+
+//     let userdata = await Users.findByPk(1)
+//     userid = userdata.dataValues.id
+//     console.log(userid)
+//     // let item = wishlist.find
+
+
+//     res.render('wishlist', {
+//         heading: 'my wishlist',
+//         para: 'my paragraph',
+//         layout: 'layouts/main'
+//     })
+// })
 
 // route.post('/wishlist', (req, res) => {
 //     wishlist.create({
 //         listId: req.body.listId,
-//         item_name: req.body.item_name,
+//         item_name: req.body.name,
 //         description: req.body.description,
 //         img_url: req.body.img_url
-//     }).then(() => {
-//         res.redirect('/wishlist')
-//     }).catch((err) => {
-//         if (err) throw err
 //     })
+//     res.redirect('/home/wishlist')
 // })
-route.post('/wishlist', (req, res) => {
-    wishlist.create({
-        listId: req.body.listId,
-        item_name: req.body.item_name,
-        description: req.body.description,
-        img_url: req.body.img_url
-    })
-    res.send('success')
-})
 
-route.get('/user', (req, res) => {
-    res.send(req.user)
-})
+// route.get('/user', (req, res) => {
+//     console.log(req.user.id)
+//     res.send(req.user.username)
+
+// })
 
 module.exports = {
     route

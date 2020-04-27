@@ -1,17 +1,24 @@
 const route = require('express').Router()
-const { db, Users } = require('../models/db')
+const Users = require('../model/Users')
 route.get('/', (req, res) => {
     res.render('signup')
 })
 route.post('/', (req, res) => {
-    Users.create({
+    const newUser = {
         username: req.body.username,
-        password: req.body.password,
-        email: req.body.email
-    }).then(() => {
+        email: req.body.username,
+        password: req.body.password
+    }
+    new Users(newUser).save().then((user) => {
+        console.log(user)
         res.redirect('/login')
     }).catch((err) => {
-        if (err) throw err
+        console.log(err)
+        if (err.kind === 'unique') {
+            res.render('signup', {
+                message: 'Username already exists'
+            })
+        }
     })
 })
 
