@@ -14,7 +14,7 @@ route.post('/', (req, res) => {
         res.redirect('/login')
     }).catch((err) => {
         console.log(err)
-        if (err.kind === 'unique') {
+        if (err.code === 11000) {
             res.render('signup', {
                 message: 'Username already exists'
             })
