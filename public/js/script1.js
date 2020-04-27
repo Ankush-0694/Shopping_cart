@@ -18,11 +18,11 @@ $(() => {
 
 
 
-        $.post('/home/wishlist', {
-            listId: item_Id,
-            name: item_name,
-            description: item_description,
-            img_url: item_img_url
+        $.post('/wishlist', {
+            item_Id: item_Id,
+            item_name: item_name,
+            item_description: item_description,
+            item_img_url: item_img_url
         })
         // $.ajax({
         //     url: '/home/wishlist',
@@ -36,10 +36,10 @@ $(() => {
         // })
 
 
-        // console.log(item)
+        // console.log(item_Id)
         // console.log(item_nest)
-        // console.log(listId)
-        // console.log(name)
+        // // console.log(listId)
+        // console.log(item_name)
         // console.log(description)
         // console.log(img_url)
     })

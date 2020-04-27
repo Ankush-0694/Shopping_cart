@@ -3,6 +3,9 @@ const route = express.Router()
 
 
 route.get('/', (req, res) => {
+    if (!req.user) {
+        return res.redirect('/login')
+    }
     res.render('home', {
         style: 'home.css',
         javascript: 'script1.js',

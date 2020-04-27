@@ -49,17 +49,15 @@ app.use(express.static(__dirname + "/public"))
 
 
 
-app.use('/home', require('./routes/handlers').route)
 
 app.use('/login', require('./routes/login').route)
 app.use('/signup', require('./routes/signup').route)
+app.use('/', require('./routes/home').route)
+app.use('/wishlist', require('./routes/wishlist').route)
 
-// app.get('/', (req, res) => {
-//     if (!req.user) {
-//         return res.redirect('/login')
-//     }
-//     res.redirect('/home')
-// })
+
+
+
 // app.get('/logout', function (req, res) {
 //     req.logout();
 //     res.redirect('/login');
