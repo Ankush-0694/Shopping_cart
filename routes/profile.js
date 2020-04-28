@@ -8,7 +8,8 @@ route.get('/', async (req, res) => {
         console.log(profile)
         res.render('profile', {
             style: 'profile.css',
-            profile: profile
+            profile: profile,
+            username: req.user.username
         })
     }).catch((err) => {
         console.log(err)

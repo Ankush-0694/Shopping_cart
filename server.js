@@ -61,10 +61,10 @@ app.use('/createProfile', require('./routes/createProfile').route)
 
 
 
-// app.get('/logout', function (req, res) {
-//     req.logout();
-//     res.redirect('/login');
-// });
+app.get('/logout', function (req, res) {
+    req.logout();
+    res.redirect('/login');
+});
 
 
 
