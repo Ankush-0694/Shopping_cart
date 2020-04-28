@@ -1,0 +1,45 @@
+#nav-bar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#nav-bar>* {
+    /* display:flex; */
+    flex: 1 1 0;
+    /* justify-content: center; */
+}
+
+#nav-bar ul {
+    display: flex;
+    justify-content: center;
+}
+
+#nav-bar ul li {
+    background: none;
+}
+
+#nav-bar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav-bar form {
+    flex-grow: 2;
+    display: flex;
+}
+
+#nav-bar form>input {
+    flex-grow: 3;
+}
+
+#nav-bar span {
+    text-align: center;
+}
+
+
+#nav-bar input {
+    background-color: transparent;
+}

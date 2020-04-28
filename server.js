@@ -41,7 +41,8 @@ mongoose.connect('mongodb://localhost/test', {
 
 
 app.engine('hbs', hbs.express4({
-    partialsDir: __dirname + '/views/partials'
+    partialsDir: __dirname + '/views/partials',
+    defaultLayout: __dirname + '/views/layouts/main'
 }))
 
 app.set('view engine', 'hbs')
@@ -54,6 +55,8 @@ app.use('/login', require('./routes/login').route)
 app.use('/signup', require('./routes/signup').route)
 app.use('/', require('./routes/home').route)
 app.use('/wishlist', require('./routes/wishlist').route)
+app.use('/profile', require('./routes/profile').route)
+app.use('/createProfile', require('./routes/createProfile').route)
 
 
 

@@ -16,7 +16,7 @@ passport.use(new LocalStrategy((username, password, done) => {
         }
         if (user.password != password) {
             return done(null, false, {
-                message: "Password Galat Hai Janaab"
+                message: "Wrong Password"
             })
         }
         // console.log(User)

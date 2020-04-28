@@ -16,13 +16,8 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true
-    },
-    firstName: {
-        type: String,
-    },
-    lastName: {
-        type: String,
     }
+
 })
 // userSchema.plugin(uniqueValidator)
 

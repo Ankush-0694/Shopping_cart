@@ -1,7 +1,9 @@
 const route = require('express').Router()
 const Users = require('../model/Users')
 route.get('/', (req, res) => {
-    res.render('signup')
+    res.render('signup', {
+        style: 'signup.css'
+    })
 })
 route.post('/', (req, res) => {
     const newUser = {
@@ -16,7 +18,8 @@ route.post('/', (req, res) => {
         console.log(err)
         if (err.code === 11000) {
             res.render('signup', {
-                message: 'Username already exists'
+                message: 'Username already exists',
+                style: 'signup.css'
             })
         }
     })

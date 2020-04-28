@@ -4,7 +4,9 @@ route.get('/', (req, res) => {
     if (req.user) {
         return res.redirect('/')
     }
-    res.render('login')
+    res.render('login', {
+        style: 'login.css'
+    })
 })
 
 route.post('/', function (req, res, next) {

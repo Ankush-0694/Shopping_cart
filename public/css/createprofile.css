@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #17a2b8;
+    height: 100vh;
+  }
+  #profile .container #profile-row #profile-column #profile-box {
+    margin-top: 120px;
+    max-width: 600px;
+    min-height: 320px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+  }
+  #profile .container #profile-row #profile-column #profile-box #profile-form {
+    padding: 20px;
+  }
+  #profile .container #profile-row #profile-column #profile-box #profile-form #register-link {
+    margin-top: -85px;
+  }
