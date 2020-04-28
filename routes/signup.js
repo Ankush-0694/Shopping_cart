@@ -8,7 +8,7 @@ route.get('/', (req, res) => {
 route.post('/', (req, res) => {
     const newUser = {
         username: req.body.username,
-        email: req.body.username,
+        email: req.body.email,
         password: req.body.password
     }
     new Users(newUser).save().then((user) => {

@@ -7,15 +7,18 @@ const profileSchema = new Schema({
     },
     firstName: {
         type: String,
+        default: 'JOHN'
     },
     lastName: {
         type: String,
+        default: 'DOE'
     },
     gender: {
         type: String
     },
     profession: {
-        type: String
+        type: String,
+        default: 'berozgaari'
     },
     about: {
         type: String
