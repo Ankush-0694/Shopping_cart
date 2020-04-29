@@ -18,7 +18,6 @@ const profileSchema = new Schema({
     },
     profession: {
         type: String,
-        default: 'berozgaari'
     },
     about: {
         type: String
