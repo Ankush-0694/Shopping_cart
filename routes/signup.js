@@ -1,5 +1,7 @@
 const route = require('express').Router()
 const Users = require('../model/Users')
+const profile = require('../model/profile_model')
+
 route.get('/', (req, res) => {
     res.render('signup', {
         style: 'signup.css'
