@@ -1,20 +1,26 @@
 const express = require('express')
 const route = express.Router()
-
+const profile = require('../model/profile_model')
 
 route.get('/', (req, res) => {
     if (!req.user) {
         return res.redirect('/login')
     }
-
-    res.render('home', {
-        style: 'home.css',
-        javascript: 'script1.js',
-        title: 'homepage',
-        layout: 'layouts/main'
+    profile.findOne({
+        username: req.user.username
+    }).then((profile) => {
+        if (profile == null) {
+            return res.redirect('/createprofile')
+        }
+        res.render('home', {
+            style: 'home.css',
+            javascript: 'script1.js',
+            title: 'homepage',
+            layout: 'layouts/main'
+        })
+    }).catch((err) => {
+        console.log(err)
     })
-
-
 })
 
 route.get('/user', (req, res) => {

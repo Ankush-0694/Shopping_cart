@@ -4,36 +4,15 @@ const profile = require('../model/profile_model')
 
 
 route.get('/', (req, res) => {
-
-    // profile.findOne({
-    //     username: req.user.username
-    // }).then((profile) => {
-    //     if (profile === null) {
-    //         let username = {
-    //             username: req.user.username
-    //         }
-    //         new profile(username).save().then((profile) => {
-    //             console.log(profile)
-    //             res.render('editProfile', {
-    //                 style: 'editProfile.css',
-    //                 profile: profile
-    //             })
-    //         }).catch((err) => {
-    //             console.log(err)
-    //         })
-    //     }
-    //     else {
-    //         res.render('editProfile', {
-    //             style: 'editProfile.css',
-    //             profile: profile
-    //         })
-    //     }
-    // })
-
-    res.render('editProfile', {
-        style: 'editProfile.css',
-        profile: profile
+    profile.findOne({ username: req.user.username }).then((profile) => {
+        res.render('editProfile', {
+            style: 'editProfile.css',
+            profile: profile
+        })
+    }).catch((err) => {
+        console.log(err)
     })
+
 })
 
 route.post('/', (req, res) => {
@@ -53,18 +32,6 @@ route.post('/', (req, res) => {
     }).catch((err) => {
         console.log(err)
     })
-
-    // username: req.user.username,
-    //     firstName: req.body.firstName,
-    //     lastName: req.body.lastName,
-    //     gender: req.body.gender,
-    //     profession: req.body.profession,
-    //     about: req.body.about
-    // new profile(data).save().then((profile) => {
-    //     res.redirect('/profile')
-    // }).catch((err) => {
-    //     console.log(err)
-    // })
 })
 
 module.exports = {

@@ -57,6 +57,8 @@ app.use('/', require('./routes/home').route)
 app.use('/wishlist', require('./routes/wishlist').route)
 app.use('/profile', require('./routes/profile').route)
 app.use('/editProfile', require('./routes/editProfile').route)
+app.use('/createProfile', require('./routes/createProfile').route)
+
 
 
 
