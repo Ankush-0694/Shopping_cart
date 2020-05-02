@@ -1,12 +1,24 @@
-{{> navbar}}
-<h1 class="m-3">{{ heading }}</h1>
-<p>{{ para }}</p>
-<ul class="list-group" id="list">
+{{>navbar}}
+<div id="header" class="text-center mx-3">
+    <h1 class="p-3">MY WISHLIST</h1>
+</div>
+{{#each products as |item|}}
+<div class="container">
+    <div class="card mb-3" style="max-width: 800px;" id={{item.item_Id}}>
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <img src="{{item.item_img_url}}" class="card-img" alt="...">
+            </div>
+            <div class="col-sm-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.item_name}}</h5>
+                    <p class="card-text">{{item.item_description}}</p>
+                    <button type="button" class="btn btn-primary mx-2 my-2">ADD TO CART</button>
+                    <button type="button" class="btn btn-danger mx-2 my-2">REMOVE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-
-    {{#each products as |item|}}
-    <li class="list-group-item">{{item.item_name}} {{item.item_description}}</li>
-    {{/each}}
-
-</ul>
+{{/each}}

@@ -1,0 +1,13 @@
+
+
+@media only screen and (max-width: 576px) {
+    .card{
+        width: 70vw;
+        margin: 10px auto !important;
+    }
+    .card-img{
+        max-height: 200px;
+        max-width: 200px;
+        margin-top:10px;
+    }
+}

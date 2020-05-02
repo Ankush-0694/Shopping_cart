@@ -8,8 +8,6 @@ route.get('/', (req, res) => {
         username: req.user.username
     }).then((items) => {
         res.render('wishlist', {
-            heading: 'my wishlist',
-            para: 'my paragraph',
             style: 'wishlist.css',
             layout: 'layouts/main',
             products: items

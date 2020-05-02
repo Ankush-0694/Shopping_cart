@@ -1,8 +1,55 @@
 {{> navbar}}
 
-<div class="bg-primary" id="trending">
+{{!-- caraousel section --}}
+
+<div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+
+        <div class="carousel-item active" style="background: #25c;">
+            <div class="caption">
+                <h1>Welcome To My PlantHUB</h1>
+                <h2>Shop your favourite plant</h2>
+            </div>
+        </div>
+
+        <div class="carousel-item" style="background: #52c;">
+            <div class="caption">
+                <h1>Something and share your whatever</h1>
+                <h2>Else it easy for you to do whatever this thing does.</h2>
+            </div>
+        </div>
+        <div class="carousel-item"
+            style="background-image: url('image/hessam-hojati-aI6BoB5h9Lc-unsplash.jpg'); background-size: cover;">
+            <div class="caption">
+                <h1>Create and share your whatever</h1>
+                <h2>Make it easy for you to do whatever this thing does.</h2>
+            </div>
+        </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>
+
+{{!-- carousel ends --}}
+
+<div class="bg-light" id="trending">
     <div class="mx-auto" id="trend-heading" style="text-align: center;">
         <h1>TRENDING PRODUCTS</h1>
+        <hr>
         <p style=" text-align: center;">our plant house</p>
     </div>
     <div class="container-lg">
@@ -13,6 +60,7 @@
                     <h5 class="card-title">Card title 1</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
+                    <div class="text-center bg-light p-3 price">Price-800$</div>
                 </div>
                 <div class="card-footer bg-dark ">
 
@@ -31,6 +79,8 @@
                     <p class="card-text">This card has supporting text below as a natural lead-in to additional
                         content.
                     </p>
+                    <div class="text-center bg-light p-3" price>Price-800$</div>
+
                 </div>
                 <div class="card-footer bg-dark">
                     <div class="btn-group d-sm-block" style="text-align: center;" role="group"
@@ -49,6 +99,8 @@
                         additional content. This card has even longer content than the first to show that equal
                         height
                         action.</p>
+                    <div class="text-center bg-light p-3 price">Price-800$</div>
+
                 </div>
                 <div class="card-footer bg-dark">
                     <div class="btn-group d-sm-block" style="text-align: center;" role="group"
@@ -61,7 +113,9 @@
             </div>
         </div>
     </div>
-
+    <div class="mb-3 mt-2 text-center"><a href="/trending" class="text-dark bg-primary px-3 py-2 text-large">SEE
+            MORE</a>
+    </div>
 </div>
 <div class="container-fluid bg-dark">
     <div class="container">

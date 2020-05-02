@@ -26,7 +26,6 @@ route.post('/', (req, res) => {
         profile.about = req.body.about
 
         profile.save().then((profile) => {
-            console.log(profile)
             res.redirect('/profile')
         })
     }).catch((err) => {
