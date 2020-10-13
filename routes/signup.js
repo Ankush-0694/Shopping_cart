@@ -1,11 +1,11 @@
 const route = require('express').Router()
 const Users = require('../model/Users')
-const profile = require('../model/profile_model')
+// const profile = require('../model/profile_model')
 
 route.get('/', (req, res) => {
     res.render('signup', {
         style: 'signup.css'
-    })
+    });
 })
 route.post('/', (req, res) => {
     const newUser = {
@@ -14,8 +14,8 @@ route.post('/', (req, res) => {
         password: req.body.password
     }
     new Users(newUser).save().then((user) => {
-        console.log(user)
-        res.redirect('/login')
+        console.log(user);
+        res.redirect('/login');
     }).catch((err) => {
         console.log(err)
         if (err.code === 11000) {

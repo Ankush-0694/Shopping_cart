@@ -14,9 +14,10 @@ route.get('/', (req, res) => {
         }
         res.render('home', {
             style: 'home.css',
-            javascript: 'script1.js',
+            javascript: 'homeClient.js',
             title: 'homepage',
-            layout: 'layouts/main'
+            layout: 'layouts/main',
+            username: req.user.username
         })
     }).catch((err) => {
         console.log(err)

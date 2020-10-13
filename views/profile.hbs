@@ -1,102 +1,70 @@
 {{>navbar}}
+
+<h1 id="header">YOUR ACCOUNT</h1>
+<hr id="header-line">
+
+
 <div class="container user-profile">
-    <form method="post">
+    <div method="post">
         <div class="row">
             <div class="col-md-4">
-                <div class="profile-img">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
-                        alt="" />
-                    <div class="file btn btn-lg btn-primary">
-                        Change Photo
-                        <input type="file" name="file" />
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="profile-head">
-                    <h5>
-                        {{profile.firstName}} {{profile.lastName}}
-                    </h5>
-                    <h6>
-                        {{profile.profession}}
-                    </h6>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <a class="profile-edit-btn" href=" /editProfile">Edit Profile</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="profile-work">
-                    <p>Social LINK</p>
-                    <a href="">Website Link</a><br />
-                    <a href="">Bootsnipp Profile</a><br />
-                    <a href="">Bootply Profile</a>
-                </div>
+                <div id="svg"><img src="image/plant.svg" alt=""></div>
             </div>
             <div class="col-md-8">
-                <div class="tab-content profile-tab" id="myTabContent">
-                    <div id="home">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Username</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>{{user.username}}</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>First Name</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>{{profile.firstName}}</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Last Name</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>{{profile.lastName}}</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Email</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>{{user.email}}</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Gender</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>{{ profile.gender}}</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Profession</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>{{ profile.profession }}</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>About</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>{{ profile.about }}</p>
-                            </div>
-                        </div>
+                <div class="row my-2">
+                    <div class="profile-head col-md-6">
+                        <h5>
+                            {{profile.firstName}} {{profile.lastName}}
+                        </h5>
+
+                    </div>
+                    <div class="col-md-6">
+                        <a class="profile-edit-btn" href=" /editProfile">Edit Profile</a>
                     </div>
                 </div>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <label>First Name</label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>{{profile.firstName}}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Last Name</label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>{{profile.lastName}}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Email</label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>{{user.email}}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Gender</label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>{{ profile.gender}}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Profession</label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>{{ profile.profession }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label>About</label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>{{ profile.about }}</p>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </form>
+
+    </div>
+
 </div>

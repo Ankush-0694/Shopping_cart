@@ -6,7 +6,7 @@ route.get('/', (req, res) => {
     res.render('createProfile', {
         style: 'editProfile.css'
     })
-})
+});
 route.post('/', (req, res) => {
     let data = {
         username: req.user.username,
@@ -21,7 +21,7 @@ route.post('/', (req, res) => {
     }).catch((err) => {
         console.log(err)
     })
-})
+});
 module.exports = {
     route
 }
