@@ -1,0 +1,34 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// this project does not use the hashing or salting the password if anyone get the access of db then he can easily get the password.
+//we can use passport local mongoose for that
+// {
+//     _id: 5f889eb3582d67383049d516,
+//     username: 'aaoNA',
+//     email: 'Gale@gmail.com',      
+//     password: 'dikhrhahai',  //this should be hashed and stored the hashed password     
+//     __v: 0
+//   }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+not the improvement but the trick
+
+USER PLUGIN
+MAKE A mongooseMODEL
+THEN Following 3 lines of code
+
+passport.use(User.createStrategy());
+ 
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+WE CAN USE UPPER 3 LINE WITHOUT CREATING THE CODE LOCAL Strategy IN SEPARATE FILE.
+
+then just use documentation to apply in signup and login
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+We should check for authetication for every route except login and signup for avoiding error and protect them to access.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+

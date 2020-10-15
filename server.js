@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const app = express();
 const hbs = require('express-hbs');
@@ -5,7 +6,8 @@ const session = require('express-session');
 const passport = require('passport');
 const flash = require('connect-flash');
 const mongoose = require('mongoose');
-require('./passport');
+require('./passport');//this is thing why passport can be used in the login.js file.
+
 
 
 app.use(express.json());
@@ -13,8 +15,10 @@ app.use(express.urlencoded({
     extended: true
 }));
 
+
+//secret should in .dotenv file for make it hidden from github and deployment
 app.use(session({
-    secret: 'hashashashashashashashashashashash',
+    secret: process.env.secret_key,
     resave: false,
     saveUninitialized: true
 }));

@@ -1,5 +1,5 @@
 const route = require('express').Router()
-const passport = require('passport')
+const passport = require('passport')//this is npm module not the filename
 route.get('/', (req, res) => {
     if (req.user) {
         return res.redirect('/')

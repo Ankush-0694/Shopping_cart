@@ -1,45 +1,45 @@
-#nav-bar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+/* .navbar-color {
+  background-color: #21ee0690 !important;
+} */
+.navbar-color {
+  background-color: black;
 }
-
-#nav-bar>* {
-    /* display:flex; */
-    flex: 1 1 0;
-    /* justify-content: center; */
+.navbar-brand {
+  color: white;
 }
-
-#nav-bar ul {
-    display: flex;
-    justify-content: center;
+.navbar-toggler {
+  z-index: 100;
 }
-
 #nav-bar ul li {
-    background: none;
+  background: none;
+  margin: 0 10px;
 }
 
 #nav-bar ul li a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 #nav-bar form {
-    flex-grow: 2;
-    display: flex;
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
 }
 
-#nav-bar form>input {
-    flex-grow: 3;
+#nav-bar form > input {
+  flex-grow: 0.5;
 }
 
-#nav-bar span {
-    text-align: center;
+span {
+  text-align: center;
 }
-
 
 #nav-bar input {
-    background-color: transparent;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+.btn-submit {
+  background-color: rgb(10, 77, 27);
+  color: white;
 }

@@ -1,28 +1,55 @@
-<div class="container-fluid m-0 p-0 bg-dark">
-    <div class="container-fluid m-0 p-0">
-        <nav class="navbar py-4 " id="nav-bar">
-            <span class="navbar-brand pl-3 text-light">LOGO</span>
-            <form class="form-inline  px-2">
+<div class="container-fluid navbar-color">
+    <nav class="navbar navbar-expand-md " id="nav-bar">
+        <a class="navbar-brand" href="#">TREFLE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">click</span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-submit btn-outline-dark " type="submit">Search</button>
             </form>
-            <ul class="list-group list-group-horizontal">
-                <li class="list-group-item border-0">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
                     <a href="/">HOME</a>
                 </li>
-                <li class="list-group-item border-0">
+                <li class="nav-item">
                     <a href="/wishlist">WISHLIST</a>
                 </li>
-                <li class="list-group-item border-0">
+                <li class="nav-item">
                     <a href="/cart">CART</a>
                 </li>
-                <li class="list-group-item border-0">
+                <li class="nav-item">
                     <a href="/profile">PROFILE</a>
                 </li>
-                <li class="list-group-item border-0">
+                <li class="nav-item">
                     <a href="/logout">LOGOUT</a>
                 </li>
             </ul>
-        </nav>
-    </div>
+
+        </div>
+    </nav>
 </div>
+
+{{!-- 
+<ul id="nav-list">
+            <li class="list-group-item border-0">
+                <a href="/">HOME</a>
+            </li>
+            <li class="list-group-item border-0">
+                <a href="/wishlist">WISHLIST</a>
+            </li>
+            <li class="list-group-item border-0">
+                <a href="/cart">CART</a>
+            </li>
+            <li class="list-group-item border-0">
+                <a href="/profile">PROFILE</a>
+            </li>
+            <li class="list-group-item border-0">
+                <a href="/logout">LOGOUT</a>
+            </li>
+        </ul> --}}
