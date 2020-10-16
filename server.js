@@ -7,6 +7,7 @@ const passport = require('passport');
 const flash = require('connect-flash');
 const mongoose = require('mongoose');
 require('./passport');//this is thing why passport can be used in the login.js file.
+require('./passportOAuth');
 
 
 
@@ -45,7 +46,7 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + "/public"));
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/test', {
+mongoose.connect('mongodb://localhost/test5', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
@@ -66,6 +67,15 @@ app.use('/profile', require('./routes/profile').route);
 app.use('/editProfile', require('./routes/editProfile').route);
 app.use('/createProfile', require('./routes/createProfile').route);
 
+app.get('/auth/google',
+        passport.authenticate('google', { scope: ['profile'] }));
+
+app.get('/auth/google/home', 
+        passport.authenticate('google', { failureRedirect: '/login' }),
+        function(req, res) {
+        // Successful authentication, redirect home.
+        res.redirect('/');
+});
 
 
 

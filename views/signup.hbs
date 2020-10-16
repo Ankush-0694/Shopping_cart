@@ -24,9 +24,16 @@
                         {{#if message }}
                         <span class="text-dark pt-5">{{ message }}</span>
                         {{/if}}
-                        <div id="login-link" class="pt-3">
+                        {{!-- <div class="row"> --}}
+                        <div id="login-link" class="row">
                             <a href="/login" class="text-info">Login here</a>
                         </div>
+
+                        <div class="row  justify-content-center">
+                            <a href="/auth/google">Signup with google</a>
+                        </div>
+                        {{!-- </div> --}}
+
                     </form>
                 </div>
             </div>
