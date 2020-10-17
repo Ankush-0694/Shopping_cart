@@ -5,7 +5,7 @@ route.get('/', (req, res) => {
         return res.redirect('/')
     }
 
-    res.render('login', {
+    res.render('newLogin', {
         style: 'login.css'
     })
 })

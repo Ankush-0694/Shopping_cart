@@ -1,0 +1,43 @@
+{{> navbar}}
+
+<div class="row">
+    <div class="col-md-6 left">
+        <img src="/image/plant-svgrepo-com (2).svg" alt="">
+    </div>
+
+    <div class="col-md-6 right">
+        <div class="local-login">
+            <form action="/login" method="POST">
+                <h3>Login</h3>
+                <div>
+                    <label for="username">Username:</label><br>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div>
+                    <label for="password">Password:</label><br>
+                    <input type="text" name="password" id="password">
+                </div>
+                <div>
+                    <input type="submit" class="my-2" name="submit" value="submit">
+                </div>
+            </form>
+        </div>
+        {{#if error}}
+        <span class="text-dark pt-5">{{ error }}</span>
+        {{/if}}
+
+        <div id="signup-link">Don't have an account?
+            <a href="/signup" class="text-info">Signup here</a>
+        </div>
+        <div class="social-login">
+            <a href="/auth/google" class="btn btn-block btn-social btn-google">
+                <span class="fa fa-google"></span> Login in with Google
+            </a>
+            <a class="btn btn-block btn-social btn-facebbok">
+                <span class="fa fa-facebook"></span> Login in with Facebook
+            </a>
+        </div>
+
+
+    </div>
+</div>
