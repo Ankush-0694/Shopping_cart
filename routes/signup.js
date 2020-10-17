@@ -3,7 +3,7 @@ const Users = require('../model/Users')
 // const profile = require('../model/profile_model')
 
 route.get('/', (req, res) => {
-    res.render('signup', {
+    res.render('newSignup', {
         style: 'signup.css'
     });
 })
@@ -19,7 +19,7 @@ route.post('/', (req, res) => {
     }).catch((err) => {
         console.log(err)
         if (err.code === 11000) {
-            res.render('signup', {
+            res.render('newSignup', {
                 message: 'Username already exists',
                 style: 'signup.css'
             })

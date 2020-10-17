@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     padding: 0;
     background-color: #17a2b8;
@@ -16,4 +16,91 @@ body {
   }
   #signup .container #signup-row #signup-column #signup-box #signup-form #register-link {
     margin-top: -85px;
-  }
+  } */
+
+/* body {
+  margin: 0;
+  padding: 0;
+  background-color: #17a2b8;
+  height: 100vh;
+}
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid #9c9c9c;
+  background-color: #eaeaea;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login
+  .container
+  #login-row
+  #login-column
+  #login-box
+  #login-form
+  #register-link {
+  margin-top: -85px;
+} */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.left {
+  background: rgb(1, 107, 22);
+  height: 100vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 0 50% 50% 0/0 100% 100% 0; */
+  border-radius: 0 100% 400% 0;
+}
+.left img {
+  flex-grow: 0.5;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.local-login {
+  margin-top: -20px;
+}
+.local-login,
+.local-login input[type="text"] {
+  width: 80%;
+}
+.local-login h2 {
+  display: block;
+  width: 100%;
+}
+
+#login-link {
+  width: 80%;
+}
+
+.social-login,
+.social-login .btn {
+  width: 80%;
+  margin: 10px 0;
+}
+
+.btn-facebbok {
+  background-color: #3b5998;
+}
+.btn-facebbok:hover {
+  background-color: #3b5898d0;
+}
+
+.navbar-nav {
+  display: none;
+}
