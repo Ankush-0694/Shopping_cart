@@ -104,3 +104,20 @@ body {
 .navbar-nav {
   display: none;
 }
+
+.error {
+  width: 80%;
+}
+.error > div {
+  color: white;
+  width: 80%;
+  background-color: red;
+  border-radius: 5px;
+}
+
+#remove-warning {
+  float: right;
+  margin-right: 20px;
+  background-color: white;
+  color: black;
+}

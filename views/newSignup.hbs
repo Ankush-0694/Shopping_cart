@@ -26,8 +26,11 @@
             </form>
         </div>
 
-        {{#if message }}
-        <span class="text-dark pt-5">{{ message }}</span>
+        {{#if message}}
+        <span class="my-2  error">
+            <div class="py-2"><i class="fa fa-warning">{{ message }}</i><span id="remove-warning"><i
+                        class="fa fa-times"></i></span></div>
+        </span>
         {{/if}}
 
         <div id="login-link">Already have an account?
@@ -45,3 +48,9 @@
 
     </div>
 </div>
+
+<script type="text/javascript">
+    $('#remove-warning').click((e) => {
+        $(e.target).parent().parent().remove();
+    })
+</script>
