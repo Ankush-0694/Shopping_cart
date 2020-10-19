@@ -4,7 +4,6 @@ const w_item = require('../model/wishlist_item')
 const isAuthenticated = require('../config/auth').ensureAuthenticated;
 
 
-
 route.get('/',isAuthenticated, (req, res) => {
     res.render('wishlist', {
                 style: 'wishlist.css',

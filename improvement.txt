@@ -19,6 +19,8 @@
 We should check for authetication for every route except login and signup for avoiding error and protect them to access.
 and if they want to access without auth then send a error message and redirect them login with that message and show it on screen
 
+this is done but error msg to be added remain.
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 We should add the client side validation but only for sign up for signup form because it is giving error while using server side validation in OAuth2.0.
