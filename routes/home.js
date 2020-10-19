@@ -17,7 +17,7 @@ route.get('/', (req, res) => {
             javascript: 'homeClient.js',
             title: 'homepage',
             layout: 'layouts/main',
-            username: req.user.username
+            username: req.user._id
         })
     }).catch((err) => {
         console.log(err)

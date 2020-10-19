@@ -1,8 +1,10 @@
 const express = require('express')
 const route = express.Router()
 const profile = require('../model/profile_model')
+const isAuthenticated = require('../config/auth').ensureAuthenticated;
 
-route.get('/', (req, res) => {
+
+route.get('/',isAuthenticated, (req, res) => {
     res.render('createProfile', {
         style: 'editProfile.css'
     })

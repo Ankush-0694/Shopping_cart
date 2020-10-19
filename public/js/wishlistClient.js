@@ -4,7 +4,7 @@ $(()=>{
         // console.log(username.innerText);
         
     let wishlistKey = "wishlist-" + String(username.innerText);
-        // console.log(typeof(key));
+        // console.log(wishlistKey);
 
     function fetchItems(){
         let items = JSON.parse(localStorage.getItem(wishlistKey));
@@ -99,7 +99,12 @@ $(()=>{
 
         for(i=0;i<size;i++){
             if(allItem[i].item_id === cart_item.item_id){
-                alert("item Exists");
+                // alert("item Exists");
+                // alertify
+                //         .alert("ITEM ALREADY EXIST.", function(){
+                //             alertify.message('');
+                //         });
+                alertify.alert('Item Already Exist!');
                 break;
             }    
         }

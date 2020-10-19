@@ -2,31 +2,18 @@
 
 // this project does not use the hashing or salting the password if anyone get the access of db then he can easily get the password.
 //we can use passport local mongoose for that
-// {
-//     _id: 5f889eb3582d67383049d516,
-//     username: 'aaoNA',
-//     email: 'Gale@gmail.com',      
-//     password: 'dikhrhahai',  //this should be hashed and stored the hashed password     
-//     __v: 0
-//   }
+ {
+     _id: 5f889eb3582d67383049d516,
+     username: 'aaoNA',
+     email: 'Gale@gmail.com',      
+     password: 'dikhrhahai',  //this should be hashed and stored the hashed password     
+     __v: 0
+}
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-not the improvement but the trick
+  for this we can use bcrypt hashing algorithm using npm bcrypt but there should node version  12 so uninstall then reinstall
 
-USER PLUGIN
-MAKE A mongooseMODEL
-THEN Following 3 lines of code
 
-passport.use(User.createStrategy());
- 
- this serializeUser and deserializeUser only applicable to local Strategy
 
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-
-WE CAN USE UPPER 3 LINE WITHOUT CREATING THE CODE LOCAL Strategy IN SEPARATE FILE.
-
-then just use documentation to apply in signup and login
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 We should check for authetication for every route except login and signup for avoiding error and protect them to access.
@@ -49,18 +36,53 @@ Remove vulnerabilities from github
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Should create a Sepearte navbar for login and signup page
-.....
-
-improve error css in login and signup page.
-Make a button to close that error msg
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-handle javascript variable using if else in handlebaar layout main cause if there is no js file sent then it will give error
+Handle item exist when saving an item into wishlist or cart
+put a nice message
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tips:
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+not the improvement but the trick
+
+USER PLUGIN
+MAKE A mongooseMODEL
+THEN Following 3 lines of code
+
+passport.use(User.createStrategy());
+ 
+ this serializeUser and deserializeUser but only applicable to local Strategy
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
+WE CAN USE UPPER 3 LINE WITHOUT CREATING THE CODE LOCAL Strategy IN SEPARATE FILE.
+
+then just use documentation to apply in signup and login
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 

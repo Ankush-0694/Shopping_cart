@@ -120,7 +120,7 @@ $(() => {
 
         for(i=0;i<size;i++){
             if(allItem[i].item_id === wishlist_item.item_id){
-                alert("item Exists");
+                alertify.alert('Item Already Exist!');
                 break;
             }    
         }
