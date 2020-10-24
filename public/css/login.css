@@ -125,7 +125,7 @@
     display: none;
   }
   .local-login {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .local-login,
   .local-login input[type="text"],
@@ -136,5 +136,8 @@
   .social-login .btn {
     width: 100%;
     margin: 10px 0;
+  }
+  .popup h3 {
+    margin-left: 20px;
   }
 }

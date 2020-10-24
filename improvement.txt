@@ -14,22 +14,6 @@ Tried but version problem
   for this we can use bcrypt hashing algorithm using npm bcrypt but there should node version  12 so uninstall then reinstall
 
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-We should check for authetication for every route except login and signup for avoiding error and protect them to access.
-and if they want to access without auth then send a error message and redirect them login with that message and show it on screen
-this is done but error msg to be added remain.
-for this we have to set global varible in our server file using  req.local.errors;
-
-make a partial of error from dev connnect like (use dev connect as an reference)
-then use in main file
-
-now only remain to show this error nicely
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 We should add the client side validation but only for sign up for signup form (also DO it for creating profile and edit profile after make css good)
@@ -49,16 +33,10 @@ tried but not solved
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Should create a Sepearte navbar for login and signup page
-we can use global var as flash then check for that user.
-if it exists show logout
-so it is done
-but something is stil remain like responsive view and navitem 
+ 
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Toast of bootstrap for alert instead of alertify 
 
 
 
@@ -77,9 +55,6 @@ Toast of bootstrap for alert instead of alertify
 
 Tips:
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
 not the improvement but the trick
 
 USER PLUGIN
@@ -100,6 +75,36 @@ then just use documentation to apply in signup and login
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////done///
+We should check for authetication for every route except login and signup for avoiding error and protect them to access.
+and if they want to access without auth then send a error message and redirect them login with that message and show it on screen
+this is done but error msg to be added remain.
+for this we have to set global varible in our server file using  req.local.errors;
+
+make a partial of error from dev connnect like (use dev connect as an reference)
+then use in main file
+
+now only remain to show this error nicely
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Should create a Sepearte navbar for login and signup page
+we can use global var as flash then check for that user.
+if it exists show logout
+so it is done
+but something is stil remain like responsive view and navitem
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 

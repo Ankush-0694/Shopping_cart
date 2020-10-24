@@ -104,7 +104,9 @@ $(()=>{
                 //         .alert("ITEM ALREADY EXIST.", function(){
                 //             alertify.message('');
                 //         });
-                alertify.alert('Item Already Exist!');
+                // alertify.alert('Item Already Exist!');
+                swal("Item Already Exist!");
+
                 break;
             }    
         }
