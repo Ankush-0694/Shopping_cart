@@ -31,8 +31,12 @@ app.use(passport.session());
 app.use(flash());
 
 
+
+
 app.use((req, res, next) => {
     res.locals.error = req.flash("error");
+    res.locals.errors = req.flash("error_msg");
+    res.locals.user = req.user || null;
     next();
 });
 
@@ -46,7 +50,7 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + "/public"));
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/test5', {
+mongoose.connect('mongodb://localhost/test6', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true

@@ -1,12 +1,14 @@
 {{> navbar}}
 
 
+
 <div class="row">
     <div class="col-md-6 left">
         <img src="/image/plant-svgrepo-com (2).svg" alt="">
     </div>
 
     <div class="col-md-6 right">
+        {{> errors}}
         <div class="local-login">
             <form action="/login" method="POST">
                 <h3>Login</h3>
@@ -23,9 +25,10 @@
                 </div>
             </form>
         </div>
+
         {{#if error}}
         <span class="my-2  error">
-            <div class="py-2"><i class="fa fa-warning">{{ error }}</i><span id="remove-warning"><i
+            <div class="py-2"><i class="fa fa-warning">{{ error}}</i><span id="remove-warning"><i
                         class="fa fa-times"></i></span></div>
         </span>
         {{/if}}

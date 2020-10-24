@@ -1,6 +1,3 @@
-/* .navbar-color {
-  background-color: #21ee0690 !important;
-} */
 .navbar-color {
   background-color: black;
 }
@@ -9,6 +6,11 @@
 }
 .navbar-toggler {
   z-index: 100;
+  color: white;
+  padding: 0;
+}
+.fa-bars {
+  vertical-align: middle;
 }
 #nav-bar ul li {
   background: none;

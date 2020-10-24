@@ -10,15 +10,17 @@
                 <h3>SignUp</h3>
                 <div>
                     <label for="username">Username:</label><br>
-                    <input type="text" name="username" id="username">
+                    <input type="text" name="username" id="username" required minlength="6">
                 </div>
                 <div>
                     <label for="email">Email:</label><br>
-                    <input type="text" name="email">
+                    <input type="text" name="email" id="mail" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                 </div>
                 <div>
                     <label for="password">Password:</label><br>
-                    <input type="text" name="password" id="password">
+                    <input type="text" name="password" id="password" required
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$">
                 </div>
                 <div>
                     <input type="submit" class="my-2" name="submit" value="submit">

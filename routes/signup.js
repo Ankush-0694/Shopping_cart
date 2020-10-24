@@ -27,7 +27,8 @@ route.post('/', (req, res,next) => {
         if (err.code === 11000) {
             res.render('newSignup', {
                 message: 'Username or Email already exists',
-                style: 'signup.css'
+                style: 'signup.css',
+                javascript : 'signupClient.js'
             })
         }
     })
