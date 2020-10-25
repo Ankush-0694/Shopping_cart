@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 const hbs = require('express-hbs');
+const Handlebars = require('handlebars');
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
 const session = require('express-session');
 const passport = require('passport');
 const flash = require('connect-flash');
@@ -43,14 +45,15 @@ app.use((req, res, next) => {
 
 app.engine('hbs', hbs.express4({
     partialsDir: __dirname + '/views/partials',
-    defaultLayout: __dirname + '/views/layouts/main'
+    defaultLayout: __dirname + '/views/layouts/main',
+    handlebars: allowInsecurePrototypeAccess(Handlebars)
 }));
 
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + "/public"));
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/test6', {
+mongoose.connect('mongodb://localhost/test7', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true

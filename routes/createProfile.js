@@ -19,6 +19,7 @@ route.post('/', (req, res) => {
         about: req.body.about
     }
     new profile(data).save().then((profile) => {
+        
         res.redirect('/')
     }).catch((err) => {
         console.log(err)

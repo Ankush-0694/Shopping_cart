@@ -1,25 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-  background-color: #17a2b8;
+body {
+  background: url("../image/peter-zagar-bLgWa9b0ioY-unsplash.jpg") no-repeat
+    center center/cover;
+  position: relative;
+}
+#nav-bar {
+  z-index: 100;
+}
+#profile {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-#profile .container #profile-row #profile-column #profile-box {
-  margin-top: 120px;
-  max-width: 600px;
-  min-height: 320px;
-  border: 1px solid #9c9c9c;
-  background-color: #eaeaea;
+#overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.734);
 }
-#profile .container #profile-row #profile-column #profile-box #profile-form {
-  padding: 20px;
-}
-#profile
-  .container
-  #profile-row
-  #profile-column
-  #profile-box
-  #profile-form
-  #register-link {
-  margin-top: -85px;
+
+.text-info {
+  color: white !important;
 }

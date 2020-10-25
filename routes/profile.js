@@ -6,6 +6,7 @@ const isAuthenticated = require('../config/auth').ensureAuthenticated;
 
 route.get('/',isAuthenticated, async (req, res) => {
     profile.findOne({ username: req.user.username }).then((profile) => {
+        // console.log(profile);
         res.render('profile', {
             style: 'profile.css',
             profile: profile,
