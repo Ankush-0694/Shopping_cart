@@ -24,3 +24,7 @@ body {
 .text-info {
   color: white !important;
 }
+input {
+  color: black !important;
+  font-weight: 600 !important;
+}
